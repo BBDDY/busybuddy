@@ -3,28 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Album - BusyBuddy</title>
+    <title>BusyBuddy - Moving Company</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="gallery">
-        <h2>Our Work Gallery</h2>
-        <div class="photo-grid">
-            <!-- Repeat this block for each image -->
-            <div class="photo-item">
-                <img src="images/gallery/image1.jpg" alt="Moving Service Example 1">
-                <div class="caption">Local Residential Move</div>
-            </div>
-            <div class="photo-item">
-                <img src="images/gallery/image2.jpg" alt="Moving Service Example 2">
-                <div class="caption">Office Relocation</div>
-            </div>
-            <!-- Add more images here -->
+    <header>
+        <div class="container">
+            <h1>BusyBuddy</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Your Trusted Moving Partner</h2>
+            <p>Reliable, Friend, & Affordable Moving Services</p>
+            <a href="#contact" class="btn">Get a Quote</a>
         </div>
     </section>
 
-    <!-- Optional: Lightbox for fullscreen viewing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+
+
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Local Moving</h3>
+                    <p>We provide seamless local moving services tailored to your needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Long-Distance Moving</h3>
+                    <p>Trust us for safe and efficient long-distance relocations.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Packing Services</h3>
+                    <p>Let us handle the packing to make your move stress-free.</p>
+
+
+<section class="gallery">
+        <h2>Our Work Gallery</h2>
+        <div class="photo-grid">
+            
+         <div class="photo-item">
+<img src="C:\Users\femda\Desktop\busycss\2.jpg" alt="BUSYBUDDY" </div>
+
+            </div>
+                <div class="caption">BIG ITEMS </div>
+            </div>
+
+ <img src="C:\Users\femda\Desktop\busycss\3.jpg" alt=Moving Service </div>
+</div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+     <p>BusyBuddy is a professional moving company dedicated to making your relocation experience smooth and hassle-free, we ensure your Items are handled with care and delivered on time.</p>
+
+            <h2>Contact Us</h2>
+
+       
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BusyBuddy. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
