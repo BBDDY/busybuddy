@@ -1,13 +1,18 @@
 /* styles.css */
+* {
+    box-sizing: border-box; /* Makes padding not break widths */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: #333;
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Better for mobile */
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -15,34 +20,46 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+    position: sticky; /* Stays at top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
     margin: 0;
-    text-align: center;
+    font-size: 1.8em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
 }
 
 .hero {
-    background: url('amage.jpg') no-repeat center center/cover;
+    background: url('image.jpg') no-repeat center center/cover; /* Fixed typo */
     color: #fff;
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -59,9 +76,15 @@ nav ul li a {
 .btn {
     background: #ff6f61;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e55a4f; /* Darker on hover */
 }
 
 .services {
@@ -75,23 +98,27 @@ nav ul li a {
 
 .service-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .service-item {
-    width: 30%;
-    margin-bottom: 20px;
+    flex: 1 1 300px; /* Flexible + wraps nicely */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
 .about {
     background: #f4f4f4;
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .contact {
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -104,6 +131,7 @@ nav ul li a {
 .contact label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .contact input, .contact textarea {
@@ -112,6 +140,7 @@ nav ul li a {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: inherit;
 }
 
 footer {
@@ -119,4 +148,26 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2em;
+    }
+    
+    .service-item {
+        flex: 1 1 100%;
+    }
+}
 }
